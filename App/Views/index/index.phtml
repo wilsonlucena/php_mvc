@@ -1,0 +1,21 @@
+Route:  / Controller: indexController Action:index View: index.phtml
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($this->view->clients as $client):?>
+    <tr>
+        <td><?= $client["id"];?></td>
+        <td><?= $client["name"];?></td>
+        <td><?= $client["email"];?></td>
+    </tr>
+    <?php endforeach ;?>
+
+    </tbody>
+</table>
